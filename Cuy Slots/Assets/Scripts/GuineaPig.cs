@@ -3,11 +3,11 @@ using UnityEngine;
 public class GuineaPig : MonoBehaviour
 {
     public float speed = 5f;
-    public int index; // Identificador del conejillo de indias
+    public int index; // Index del conejillo de indias
     private bool running = false;
     private GameManager gameManager;
 
-    // Parámetros para definir la pista
+    // Parámetros
     public Transform[] waypoints;
     private int currentWaypointIndex = 0;
 
@@ -26,7 +26,7 @@ public class GuineaPig : MonoBehaviour
 
     private void MoveAlongTrack()
     {
-        // Si el conejillo de indias ha alcanzado el waypoint actual, pasa al siguiente
+        // Si el Cuy llega al waypoint actual, pasa al siguiente
         if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].position) < 0.1f)
         {
             currentWaypointIndex++;
@@ -51,7 +51,7 @@ public class GuineaPig : MonoBehaviour
     public void ResetPosition()
     {
         running = false;
-        transform.position = waypoints[0].position; // Volver al inicio de la pista
+        transform.position = waypoints[11].position; // Volver al inicio de la pista
     }
 
     public void SetSpeed(float newSpeed)

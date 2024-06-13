@@ -50,14 +50,14 @@ public class GameManager : MonoBehaviour
 
         // Restablecer velocidades aleatorias para los demás
         float minSpeed = 5f;
-        float maxRandomSpeed = 8f; // Velocidad máxima aleatoria para los perdedores
+        float maxRandomSpeed = 8f; // Velocidad máxima aleatoria para los Cuys
         foreach (var pig in guineaPigs.Where((value, index) => index != winnerIndex))
         {
             float randomSpeed = Random.Range(minSpeed, maxRandomSpeed);
             pig.SetSpeed(randomSpeed);
         }
 
-        Debug.Log("Winner is Guinea Pig: " + guineaPigs[winnerIndex].index); // Imprimir el ganador correcto
+        Debug.Log("Winner is Guinea Pig: " + guineaPigs[winnerIndex].index); // Imprimir el Cuy ganador
     }
 
     public void ResetRace()
